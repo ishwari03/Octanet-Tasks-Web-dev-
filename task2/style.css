@@ -1,0 +1,127 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing:border-box;
+}
+body{
+    height:100vh;
+    background-image:url(todo3.png);
+    background-size:cover;
+    background-position:center;
+    background-repeat: no-repeat;
+    
+}
+header{
+    
+    width:100%;
+    position:sticky;
+    top:0;
+    background:transparent;
+    z-index: 1;
+}
+header.container{
+    height:10vh;
+    width:100%;
+    margin:0 auto;
+    padding:0 50px;
+}
+.logo{
+    display:flex;
+    gap:20px;
+    align-items:center;
+}
+.logo img{
+    height: 50px;
+    width:50px;
+}
+.logo p{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size:70px;
+    font-weight:550;
+    cursor:default;
+}
+
+.hero-section {
+    max-width: 800px; /* Set maximum width for the description section */
+    margin: 20px ; /* Center-align and add margin around the section */
+    text-align: left; /* Justify text inside the description */
+    position: fixed;
+    font-size: large;
+}
+
+.hero-section h2 {
+    color: #333;
+    font-size:40px /* Text color for section headings */
+}
+
+.hero-section p {
+    line-height: 1.6; /* Set line height for paragraphs */
+}
+a{
+    color:rgb(247, 242, 242);
+    font-size: 20px;
+    text-decoration: none;
+    font-family:Arial, Helvetica, sans-serif;
+    
+}
+.container a li:hover{
+    border-bottom:2px solid;
+
+}
+ul{
+    display:flex;
+    gap:30px;
+   list-style:none; 
+}
+li{
+    font-size:20px;
+}
+nav{
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    padding:14px;
+}
+.main{
+    width:100%;
+    height:90vh;
+    position:absolute;
+    display:block;
+    box-shadow: 20px;
+}
+.content{
+    width:100%;
+    height:100%;
+    display:block;
+    position:fixed;
+}
+.content .container{
+    justify-content:center;
+    display:flex;
+    flex-direction:column;
+    width:250px;
+    margin:auto;
+    height:100%;
+}
+.todo{ 
+    cursor:url("pen.png")6 19,auto;
+    display:flex;
+    padding:14px;
+}
+.todo_value{
+    background: transparent;
+    border:none;
+    outline:none;
+    font-size:17px;
+    font-weight:bold;
+    font-family:Arial, Helvetica, sans-serif;
+    border-bottom:2px solid rgb(17, 16, 16);
+}
+.todo_checkbox{
+    cursor:inherit;
+}
+.todo:has(.todo_checkbox:checked){
+    color:white;
+    order:1;
+    text-decoration:line-through 1.5px;
+}
